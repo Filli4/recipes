@@ -113,3 +113,29 @@ form button:hover {
   margin: 8px 0;
 }
 
+/* Rating Styling */
+.rating {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rating button {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.rating button:hover {
+  background-color: #2980b9;
+}
+
+.rating span {
+  font-size: 18px;
+  font-weight: bold;
+}

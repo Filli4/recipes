@@ -37,6 +37,15 @@ function App() {
     setEditingRecipe(null); // Clear the editing state after update
   };
 
+  // Update recipe rating
+  const handleRateRecipe = (id, newRating) => {
+    setRecipes(
+      recipes.map((recipe) =>
+        recipe.id === id ? { ...recipe, rating: newRating } : recipe
+      )
+    );
+  };
+
   return (
     <div className="app-container">
       <h1>Receptdelningsplattform</h1>
@@ -51,6 +60,7 @@ function App() {
         recipes={recipes}
         onDelete={handleDeleteRecipe}
         onEdit={handleEditRecipe}
+        onRate={handleRateRecipe} // Pass down the rate function
       />
     </div>
   );
