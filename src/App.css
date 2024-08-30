@@ -1,38 +1,115 @@
-.App {
+/* App.css */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+}
+
+/* App Container */
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Header */
+h1 {
   text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Form Styling */
+form {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+form button {
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+form button:hover {
+  background-color: #27ae60;
+}
+
+/* Recipe List Styling */
+.recipe-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recipe-item {
+  background-color: #e8f8f5;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.recipe-item h2 {
+  margin-bottom: 10px;
+  color: #2980b9;
+}
+
+.recipe-item button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.recipe-item button.delete-button {
+  background-color: #e74c3c;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.recipe-item button.edit-button {
+  background-color: #3498db;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.recipe-item button.delete-button:hover {
+  background-color: #c0392b;
 }
+
+.recipe-item button.edit-button:hover {
+  background-color: #2980b9;
+}
+
+/* Recipe Detail Styling */
+.recipe-detail p {
+  margin: 8px 0;
+}
+
