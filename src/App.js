@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios'; // Lägg till Axios för att hantera API-anrop
 import RecipeList from './components/RecipeList';
 import RecipeForm from './components/RecipeForm';
 import recipesData from './data/recipes.json';
@@ -7,11 +8,23 @@ import './App.css'; // Import the CSS file
 function App() {
   const [recipes, setRecipes] = useState([]); // State to manage recipe list
   const [editingRecipe, setEditingRecipe] = useState(null); // State to manage currently editing recipe
+  const apiKey = 'dd5b416fe841475a9ee6dd045516d0bb'; // Din Spoonacular API-nyckel
 
   // Load initial recipe data from recipes.json when the component mounts
   useEffect(() => {
     setRecipes(recipesData);
   }, []);
+
+  // Function to fetch recipes from Spoonacular API based on a search query
+  const fetchRecipesFromAPI = async (query) => {
+    const url = `https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=${apiKey}`;
+    try {
+      const response = await axios.get(url);
+      setRecipes(response.data.results);
+    } catch (error) {
+      console.error("Error fetching recipes from API", error);
+    }
+  };
 
   // Add a new recipe to the list
   const handleAddRecipe = (newRecipe) => {
@@ -54,6 +67,7 @@ function App() {
         onAdd={handleAddRecipe}
         onUpdate={handleUpdateRecipe}
         editingRecipe={editingRecipe}
+        onSearch={fetchRecipesFromAPI} // Pass down the API search function
       />
       {/* List to display all recipes */}
       <RecipeList
