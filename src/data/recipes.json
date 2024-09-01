@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "image_url": "https://www.allrecipes.com/thmb/a_0W8yk_LLCtH-VPqg2uLD9I5Pk=/0x512/filters:no_upscale():max_bytes(150000):strip_icc()/11973-spaghetti-carbonara-ii-DDMFS-4x3-6edea51e421e4457ac0c3269f3be5157.jpg",
+    "image": "https://www.allrecipes.com/thmb/a_0W8yk_LLCtH-VPqg2uLD9I5Pk=/0x512/filters:no_upscale():max_bytes(150000):strip_icc()/11973-spaghetti-carbonara-ii-DDMFS-4x3-6edea51e421e4457ac0c3269f3be5157.jpg",
     "title": "Pasta Runescape",
     "ingredients": "Pasta, Ägg, Bacon, Parmesan",
     "instructions": "Köp en rune scim från grand exchange för 40k.",
@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "image_url": "https://lagahemma.se/bilder/pannkakor.jpg",
+    "image": "https://lagahemma.se/bilder/pannkakor.jpg",
     "title": "Pancakes Titans",
     "ingredients": "Mjöl, Mjölk, Ägg",
     "instructions": "Titta på Attack On Titans.",
@@ -17,7 +17,7 @@
   },
   {
     "id": 3,
-    "image_url": "https://i0.wp.com/media.zeinaskitchen.se/2014/11/tabouli-4-e1483798681981.jpg?resize=1900%2C2008",
+    "image": "https://i0.wp.com/media.zeinaskitchen.se/2014/11/tabouli-4-e1483798681981.jpg?resize=1900%2C2008",
     "title": "Tabbouleh Teemo",
     "ingredients": "Persilia, tomat, lök, citron, salt, mynta.",
     "instructions": "Kör Teemo top med smite.",

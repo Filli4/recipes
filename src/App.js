@@ -18,6 +18,8 @@ function App() {
   // Function to fetch recipes from Spoonacular API based on a search query
   const fetchRecipesFromAPI = async (query) => {
     const url = `https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=${apiKey}`;
+    
+    
     try {
       const response = await axios.get(url);
       setRecipes(response.data.results);
@@ -25,6 +27,7 @@ function App() {
       console.error("Error fetching recipes from API", error);
     }
   };
+console.log(fetchRecipesFromAPI);
 
   // Add a new recipe to the list
   const handleAddRecipe = (newRecipe) => {

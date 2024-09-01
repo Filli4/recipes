@@ -18,7 +18,7 @@ const RecipeList = ({ recipes, onDelete, onEdit, onRate }) => {
     <ul className="recipe-list">
     {recipes.map((recipe) => (
       <li key={recipe.id} className="recipe-item">
-        <img src={recipe.image_url} alt={recipe.title} className="recipe-image" />
+        <img src={recipe.image} alt={recipe.title} className="recipe-image" />
         <h2>{recipe.title}</h2>
         <div className="recipe-detail">
           <p>Ingredienser: {recipe.ingredients}</p>
