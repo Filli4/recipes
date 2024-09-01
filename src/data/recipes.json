@@ -14,5 +14,14 @@
     "ingredients": "Flour, Milk, Egg",
     "instructions": "Mix ingredients and fry.",
     "rating": 5
+  },
+  {
+    "id": 3,
+    "image_url": "https://i0.wp.com/media.zeinaskitchen.se/2014/11/tabouli-4-e1483798681981.jpg?resize=1900%2C2008",
+    "title": "Tabbouleh",
+    "ingredients": "Persilia, tomat, lök, citron, salt, mynta.",
+    "instructions": "Finhacka persilian samt tomaterna och löken, pressa citron, salta och häll i lite mynta.",
+    "rating": 10
   }
+
 ]
