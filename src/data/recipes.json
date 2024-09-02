@@ -5,7 +5,7 @@
     "title": "Pasta Runescape",
     "ingredients": "Pasta, Ägg, Bacon, Parmesan",
     "instructions": "Köp en rune scim från grand exchange för 40k.",
-    "rating": 4
+    "number": 4
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "title": "Pancakes Titans",
     "ingredients": "Mjöl, Mjölk, Ägg",
     "instructions": "Titta på Attack On Titans.",
-    "rating": 5
+    "number": 5
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "title": "Tabbouleh Teemo",
     "ingredients": "Persilia, tomat, lök, citron, salt, mynta.",
     "instructions": "Kör Teemo top med smite.",
-    "rating": 10
+    "number": 10
   }
 
 ]

@@ -16,7 +16,7 @@ const RecipeForm = ({ onAdd, onUpdate, editingRecipe, onSearch }) => {
       setIngredients(editingRecipe.ingredients);
       setInstructions(editingRecipe.instructions);
       setImageUrl(editingRecipe.image);
-      setRate(editingRecipe.rating || 0);
+      setRate(editingRecipe.number || 0);
     } else {
       setTitle('');
       setIngredients('');
@@ -32,7 +32,7 @@ const RecipeForm = ({ onAdd, onUpdate, editingRecipe, onSearch }) => {
 
     if (editingRecipe) {
       // Update existing recipe
-      onUpdate({ ...editingRecipe, title, ingredients, instructions, image: imageUrl, rating: rate });
+      onUpdate({ ...editingRecipe, title, ingredients, instructions, image: imageUrl, number: rate });
     } else {
       // Add new recipe
       const newRecipe = {
@@ -41,7 +41,7 @@ const RecipeForm = ({ onAdd, onUpdate, editingRecipe, onSearch }) => {
         ingredients,
         instructions,
         image: imageUrl,
-        rating: rate, // Default rating
+        number: rate, // Default rating
       };
       onAdd(newRecipe);
     }

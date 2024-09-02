@@ -8,7 +8,7 @@ const RecipeList = ({ recipes, onDelete, onEdit, onRate }) => {
     if (!recipe) return;
 
     // Calculate new rating within bounds
-    const newRating = Math.max(0, Math.min(10, recipe.rating + change));
+    const newRating = Math.max(0, Math.min(10, recipe.number + change));
 
     // Call the onRate function with the new rating
     onRate(recipeId, newRating);
@@ -23,7 +23,7 @@ const RecipeList = ({ recipes, onDelete, onEdit, onRate }) => {
         <div className="recipe-detail">
           <p>Ingredienser: {recipe.ingredients}</p>
           <p>Instruktioner: {recipe.instructions}</p>
-          <p>Betyg: {recipe.rating}</p>
+          <p>Betyg: {recipe.number}</p>
         </div>
         <button onClick={() => onEdit(recipe.id)} className="edit-button">Redigera</button>
         <button onClick={() => onDelete(recipe.id)} className="delete-button">Radera</button>
@@ -32,14 +32,14 @@ const RecipeList = ({ recipes, onDelete, onEdit, onRate }) => {
         <div className="rating">
           <button
             onClick={() => handleRateChange(recipe.id, -1)}
-            disabled={recipe.rating <= 0}
+            disabled={recipe.number <= 0}
           >
             -
           </button>
-          <span>Betyg: {recipe.rating}/10</span>
+          <span>Betyg: {recipe.number}/10</span>
           <button
             onClick={() => handleRateChange(recipe.id, 1)}
-            disabled={recipe.rating >= 10}
+            disabled={recipe.number >= 10}
           >
             +
           </button>

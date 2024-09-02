@@ -19,7 +19,7 @@ function App() {
   const fetchRecipesFromAPI = async (query) => {
     const url = `https://api.spoonacular.com/recipes/complexSearch?query=${query}&apiKey=${apiKey}`;
     
-    
+    console.log(url);
     try {
       const response = await axios.get(url);
       setRecipes(response.data.results);
@@ -27,7 +27,7 @@ function App() {
       console.error("Error fetching recipes from API", error);
     }
   };
-console.log(fetchRecipesFromAPI);
+
 
   // Add a new recipe to the list
   const handleAddRecipe = (newRecipe) => {
@@ -57,7 +57,7 @@ console.log(fetchRecipesFromAPI);
   const handleRateRecipe = (id, newRating) => {
     setRecipes(
       recipes.map((recipe) =>
-        recipe.id === id ? { ...recipe, rating: newRating } : recipe
+        recipe.id === id ? { ...recipe, number: newRating } : recipe
       )
     );
   };
